@@ -65,7 +65,7 @@ var
 
 inicio
 
-   escreval("Que pena, você errou 1 letra")
+   escreval("Que pena, você errou outra letra")
    escreval( )
    escreval( )
    escreval("      ''''''''''''''''                                            ")
@@ -99,7 +99,7 @@ var
 
 inicio
 
-   escreval("Que pena, você errou 1 letra")
+   escreval("Que pena, você errou outra letra")
    escreval( )
    escreval( )
    escreval("      ''''''''''''''''                                            ")
@@ -133,7 +133,7 @@ var
 
 inicio
 
-   escreval("Que pena, você errou 1 letra")
+   escreval("Que pena, você errou outra letra")
    escreval( )
    escreval( )
    escreval("      ''''''''''''''''                                            ")
@@ -167,7 +167,7 @@ var
 
 inicio
 
-   escreval("Que pena, você errou 1 letra")
+   escreval("Que pena, você errou outra letra")
    escreval( )
    escreval( )
    escreval("      ''''''''''''''''                                            ")
@@ -200,7 +200,7 @@ var
 
 inicio
 
-   escreval("Que pena, você errou 1 letra")
+   escreval("Que pena, você errou outra letra")
    escreval( )
    escreval( )
    escreval("      ''''''''''''''''                                            ")
@@ -234,7 +234,7 @@ var
 
  palavra, letra: caractere
  string: vetor[1..20] de caractere
- i,j, tamanho: inteiro
+ indice,j, tamanho: inteiro
  chances: inteiro
  ganhou: logico
  tentativaLetra, acertos, erros: caractere
@@ -249,16 +249,18 @@ inicio
    leia(palavra)
    tamanho <- compr(palavra)
    escreval("A palavra possui", tamanho, " letras")
-   i <- 1
+   indice <- 1
+
+   // tranformando caractere em string
    enquanto i <= tamanho faca
-      letra <- copia(palavra, i, 1)
-      string[i] <- letra
-      i <- i+1
+      letra <- copia(palavra, indice, 1)
+      string[indice] <- letra
+      indice <- indice+1
 
    fimenquanto
    
    j <- 0
-   
+   // imprimindo traços ou letra
    enquanto j < tamanho faca
       escreva("_ ")
       j <- j+1
