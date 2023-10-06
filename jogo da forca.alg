@@ -232,71 +232,56 @@ fimprocedimento
 var
 // maior palavra tem 46 letras
 
- palavra, letra: caractere
- string: vetor[1..20] de caractere
- indice,j, tamanho: inteiro
+ palavraMisteriosa, letraPalavra: caractere
+ string: vetor[1..5] de caractere
+ palavraAtual: vetor[1..5] de caractere
+ indice, tamanhoPalavra: inteiro
  chances: inteiro
  ganhou: logico
  tentativaLetra, acertos, erros: caractere
 
+funcao LerPalavra(palavra: caractere): caractere
+   var
+   inicio
+      escreva("digite uma palavra: ")
+      leia(palavra)
+      retorne palavra
+
+fimfuncao
 
 inicio
-   chances <- 6
-   ganhou <- falso
-   start()
-   
-   escreva("digite uma palavra: ")
-   leia(palavra)
-   tamanho <- compr(palavra)
-   escreval("A palavra possui", tamanho, " letras")
+
+   palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
+   tamanhoPalavra <- compr(palavraMisteriosa)
+   escreval("A palavra possui", tamanhoPalavra, " letras")
    indice <- 1
 
    // tranformando caractere em string
-   enquanto i <= tamanho faca
-      letra <- copia(palavra, indice, 1)
-      string[indice] <- letra
+   enquanto indice <= tamanhoPalavra faca
+      letraPalavra <- copia(palavraMisteriosa, indice, 1)
+      string[indice] <- letraPalavra
+      palavraAtual[indice] <- " _ "
+      escreva(palavraAtual[indice])
       indice <- indice+1
-
    fimenquanto
-   
-   j <- 0
-   // imprimindo traços ou letra
-   enquanto j < tamanho faca
-      escreva("_ ")
-      j <- j+1
-   fimenquanto
-   
-   enquanto (chances > 0) faca
-   
-      escreva(palavraAtual)
-      leia(tentativaLetra)
-      
-      para i de 1 ate compr(string) faca
-         se tentativaLetra = string[i] entao
-         acertos <- acertos + tentativaLetra
-         palavraAtual[i] <- tentativaLetra
-         escreva(palavraAtual)
-         fimse
-         senao
-         erros <- erros + tentativaLetra
-      fimpara
-   
-   
-   
-   
-   fimenquanto
-   
-   
-   
-   
 
+   enquanto chances < 6 faca
+      indice <- 1
+         escreval()
+         escreva("Digite uma letra.........: ")
+         leia(tentativaLetra)
 
-
-   //cabeca()
-   //corpo()
-   //bracoDireito()
-  // bracoEsquerdo()
-  // pernaDireita()
-   //pernaEsquerda()
+         enquanto (indice <= tamanhoPalavra) faca
+            se (palavraAtual[indice] <> " _ ") entao
+               palavraAtual[indice] <- palavraAtual[indice]
+            fimse
+            se (string[indice]=tentativaLetra) entao
+               palavraAtual[indice] <- tentativaLetra
+            fimse
+            escreva(palavraAtual[indice])
+            indice <- indice + 1
+         fimenquanto
+         chances <- chances + 1
+      fimenquanto
 
 fimalgoritmo

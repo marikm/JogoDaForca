@@ -9,11 +9,19 @@ var
  chances: inteiro
  ganhou: logico
  tentativaLetra, acertos, erros: caractere
+ 
+funcao LerPalavra(palavra: caractere): caractere
+   var
+   inicio
+      escreva("digite uma palavra: ")
+      leia(palavra)
+      retorne palavra
+   
+fimfuncao
 
 inicio
 
-   escreva("digite uma palavra: ")
-   leia(palavraMisteriosa)
+   palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
    escreval("A palavra possui", tamanhoPalavra, " letras")
    indice <- 1
@@ -22,8 +30,9 @@ inicio
    enquanto indice <= tamanhoPalavra faca
       letraPalavra <- copia(palavraMisteriosa, indice, 1)
       string[indice] <- letraPalavra
+      palavraAtual[indice] <- " _ "
+      escreva(palavraAtual[indice])
       indice <- indice+1
-
    fimenquanto
 
    enquanto chances < 6 faca
@@ -31,11 +40,13 @@ inicio
          escreval()
          escreva("Digite uma letra.........: ")
          leia(tentativaLetra)
+
          enquanto (indice <= tamanhoPalavra) faca
+            se (palavraAtual[indice] <> " _ ") entao
+               palavraAtual[indice] <- palavraAtual[indice]
+            fimse
             se (string[indice]=tentativaLetra) entao
                palavraAtual[indice] <- tentativaLetra
-            senao
-               palavraAtual[indice] <- "_ "
             fimse
             escreva(palavraAtual[indice])
             indice <- indice + 1
