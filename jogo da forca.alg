@@ -234,11 +234,11 @@ var
 
  palavraMisteriosa, letraPalavra: caractere
  string: vetor[1..5] de caractere
- palavraAtual: vetor[1..5] de caractere
+ palavraAtual: vetor[1..10] de caractere
+ //listaAcertos, listaErros: vetor[1..5] de caractere
  indice, tamanhoPalavra: inteiro
  chances: inteiro
- ganhou: logico
- tentativaLetra, acertos, erros: caractere
+ tentativaLetra: caractere
 
 funcao LerPalavra(palavra: caractere): caractere
    var
@@ -264,24 +264,41 @@ inicio
       escreva(palavraAtual[indice])
       indice <- indice+1
    fimenquanto
+   
+   chances <- 6
 
-   enquanto chances < 6 faca
+   enquanto chances > 0 faca
       indice <- 1
-         escreval()
-         escreva("Digite uma letra.........: ")
-         leia(tentativaLetra)
+      enquanto (indice <= tamanhoPalavra) faca
+         se (palavraAtual[indice] = string[indice]) entao
+            indice <- indice+1
+            se  indice = tamanhoPalavra entao
+               chances <- 0
+               escreval()
+               escreval("Voce ganhou")
+            fimse
+         senao
+            indice <- 1
+            escreval()
+            escreva("Digite uma letra.........: ")
+            leia(tentativaLetra)
+            enquanto (indice <= tamanhoPalavra) faca
+            // se já possui letra corretamente adivinhada receber a propria letra
+               se (palavraAtual[indice] <> " _ ") entao
+                  palavraAtual[indice] <- palavraAtual[indice]
+               fimse
+               se (string[indice]=tentativaLetra) entao
+                  palavraAtual[indice] <- tentativaLetra
 
-         enquanto (indice <= tamanhoPalavra) faca
-            se (palavraAtual[indice] <> " _ ") entao
-               palavraAtual[indice] <- palavraAtual[indice]
-            fimse
-            se (string[indice]=tentativaLetra) entao
-               palavraAtual[indice] <- tentativaLetra
-            fimse
-            escreva(palavraAtual[indice])
-            indice <- indice + 1
-         fimenquanto
-         chances <- chances + 1
+               fimse
+               escreva(palavraAtual[indice])
+               indice <- indice + 1
+            fimenquanto
+         fimse
+      fimenquanto
+
+         // se string[indice]
+         chances <- chances - 1
       fimenquanto
 
 fimalgoritmo
