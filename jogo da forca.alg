@@ -235,7 +235,6 @@ var
  palavraMisteriosa, letraPalavra: caractere
  string: vetor[1..5] de caractere
  palavraAtual: vetor[1..10] de caractere
- //listaAcertos, listaErros: vetor[1..5] de caractere
  indice, tamanhoPalavra: inteiro
  chances: inteiro
  tentativaLetra: caractere
@@ -269,7 +268,10 @@ inicio
 
    enquanto chances > 0 faca
       indice <- 1
+
       enquanto (indice <= tamanhoPalavra) faca
+         // verifica se a letra da palavra atual corresponde
+         //com a letra da palavra misteriosa
          se (palavraAtual[indice] = string[indice]) entao
             indice <- indice+1
             se  indice = tamanhoPalavra entao
@@ -296,7 +298,6 @@ inicio
             fimenquanto
          fimse
       fimenquanto
-
          // se string[indice]
          chances <- chances - 1
       fimenquanto
