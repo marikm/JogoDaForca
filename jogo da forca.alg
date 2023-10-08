@@ -233,11 +233,13 @@ var
 // maior palavra tem 46 letras
 
  palavraMisteriosa, letraPalavra: caractere
- string: vetor[1..5] de caractere
- palavraAtual: vetor[1..10] de caractere
- indice, tamanhoPalavra: inteiro
+ string, palavraAtual: vetor[1..5] de caractere
+ listaAcertos, listaErros: vetor[0..5] de caractere
+ numAcertos, numErros: inteiro
+ indice,tamanhoPalavra: inteiro
  chances: inteiro
  tentativaLetra: caractere
+ letraEncontrada: logico
 
 funcao LerPalavra(palavra: caractere): caractere
    var
@@ -265,7 +267,6 @@ inicio
    fimenquanto
    
    chances <- 6
-
    enquanto chances > 0 faca
       indice <- 1
 
@@ -284,6 +285,7 @@ inicio
             escreval()
             escreva("Digite uma letra.........: ")
             leia(tentativaLetra)
+            letraEncontrada <- falso
             enquanto (indice <= tamanhoPalavra) faca
             // se já possui letra corretamente adivinhada receber a propria letra
                se (palavraAtual[indice] <> " _ ") entao
@@ -291,15 +293,24 @@ inicio
                fimse
                se (string[indice]=tentativaLetra) entao
                   palavraAtual[indice] <- tentativaLetra
-
+                  letraEncontrada <- verdadeiro
                fimse
                escreva(palavraAtual[indice])
                indice <- indice + 1
             fimenquanto
+            se (letraEncontrada = verdadeiro) entao
+               listaAcertos[numAcertos] <- tentativaLetra
+               numAcertos <- numAcertos + 1
+            senao
+               listaErros[numErros] <- tentativaLetra
+               numErros <- numErros + 1
+               chances <- chances - 1
+            fimse
          fimse
       fimenquanto
-         // se string[indice]
-         chances <- chances - 1
+
+         escreval()
+         escreval("numero de chances restantes: ", chances)
       fimenquanto
 
 fimalgoritmo

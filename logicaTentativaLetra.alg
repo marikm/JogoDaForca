@@ -55,3 +55,20 @@ inicio
       fimenquanto
       
 fimalgoritmo
+
+procedimento AcertoOuErro(palavra: vetor[1..5] de caracter)
+
+var
+palavra: vetor[1..5] de caracter
+
+inicio
+
+   enquanto indice <= tamanhoPalavra faca
+      letraPalavra <- copia(palavraMisteriosa, indice, 1)
+      string[indice] <- letraPalavra
+      palavraAtual[indice] <- " _ "
+      escreva(palavraAtual[indice])
+      indice <- indice+1
+   fimenquanto
+
+fimprocedimento
