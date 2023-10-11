@@ -233,8 +233,8 @@ var
  palavraMisteriosa, letraPalavra: caractere
  string, palavraAtual: vetor[1..5] de caractere
  listaAcertos, listaErros: vetor[0..5] de caractere
- numAcertos, numErros: inteiro
- indice,tamanhoPalavra: inteiro
+ numAcertos, numErros, posLista: inteiro
+ indice, tamanhoPalavra: inteiro
  chances: inteiro
  tentativaLetra: caractere
  letraEncontrada, ganhou: logico
@@ -265,6 +265,7 @@ inicio
    numErros       <- 0
    tamanhoPalavra <- 0
    chances        <- 6
+   posLista       <- 0
 
    palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
@@ -278,11 +279,21 @@ inicio
       palavraAtual[indice] <- " _ "
       indice <- indice+1
    fimenquanto
+   
+   para posLista de 0 ate 5 faca
+      listaErros[posLista] <- " * "
+   fimpara
 
 
    enquanto chances > 0 faca
       limpatela
       imprimePersonagem(chances)
+      escreva("Letras erradas: ")
+      
+      para posLista de 0 ate 5 faca
+         escreva(" ", listaErros[posLista])
+      fimpara
+      
       escreval()
       se (chances > 0) e (ganhou=falso) entao
          escreval("numero de chances restantes: ", chances)
