@@ -250,10 +250,15 @@ funcao LerPalavra(palavraUsuario: caractere): caractere
    i <- 0
       enquanto i <= 2 faca
          leia(palavraUsuario)
+         limpatela
          listaPalavras[i] <- palavraUsuario
          i <- i + 1
       fimenquanto
-
+      aleatorio 0, 2
+         leia(i)
+      aleatorio off
+      
+      retorne listaPalavras[i]
 fimfuncao
 
 inicio
@@ -262,8 +267,11 @@ inicio
    numErros   <- 0
    tamanhoPalavra <- 0
 
+
    palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
+   limpatela
+   start()
    escreval("A palavra possui", tamanhoPalavra, " letras")
    indice <- 1
 
@@ -320,10 +328,32 @@ inicio
 
          escreval()
          escreval()
+         // Imprimindo o personagem
+         escolha chances
+            caso 5
+               limpatela
+               cabeca()
+            caso 4
+               limpatela
+               corpo()
+            caso 3
+               limpatela
+               bracoDireito()
+            caso 2
+               limpatela
+               bracoEsquerdo()
+            caso 1
+               limpatela
+               pernaDireita()
+            
+         fimescolha
+         
          se (chances > 0) e (ganhou=falso) entao
             escreval("numero de chances restantes: ", chances)
          fimse
          se (chances = 0) e (ganhou=falso) entao
+            limpatela
+            pernaEsquerda()
             escreval("Você perdeu, a palavra misteriosa era: ", palavraMisteriosa)
          fimse
          se ganhou=verdadeiro entao
