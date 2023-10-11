@@ -8,7 +8,6 @@ inicio
 
    escreval("====================Bem vindo ao jogo da forca====================")
    escreval( )
-   escreval( )
    escreval("      ''''''''''''''''                                            ")
    escreval("      ''''''''''''''''                                            ")
    escreval("      '''          '''                                            ")
@@ -38,7 +37,6 @@ inicio
 
    escreval("Que pena, você errou 1 letra")
    escreval( )
-   escreval( )
    escreval("      ''''''''''''''''                                            ")
    escreval("      ''''''''''''''''                                            ")
    escreval("      '''          '''                                            ")
@@ -67,7 +65,6 @@ inicio
 
    escreval("Que pena, você errou outra letra")
    escreval( )
-   escreval( )
    escreval("      ''''''''''''''''                                            ")
    escreval("      ''''''''''''''''                                            ")
    escreval("      '''          '''                                            ")
@@ -81,11 +78,6 @@ inicio
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
    escreval("      '''                                                         ")
    escreval("     '''''                                                        ")
    escreval("  '''''''''''                                                     ")
@@ -101,7 +93,6 @@ inicio
 
    escreval("Que pena, você errou outra letra")
    escreval( )
-   escreval( )
    escreval("      ''''''''''''''''                                            ")
    escreval("      ''''''''''''''''                                            ")
    escreval("      '''          '''                                            ")
@@ -115,11 +106,6 @@ inicio
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
    escreval("      '''                                                         ")
    escreval("     '''''                                                        ")
    escreval("  '''''''''''                                                     ")
@@ -135,7 +121,6 @@ inicio
 
    escreval("Que pena, você errou outra letra")
    escreval( )
-   escreval( )
    escreval("      ''''''''''''''''                                            ")
    escreval("      ''''''''''''''''                                            ")
    escreval("      '''          '''                                            ")
@@ -149,11 +134,6 @@ inicio
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
    escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
    escreval("      '''                                                         ")
    escreval("     '''''                                                        ")
    escreval("  '''''''''''                                                     ")
@@ -181,14 +161,9 @@ inicio
    escreval("      '''         / | \                                           ")
    escreval("      '''        /  |  \                                          ")
    escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
    escreval("      '''            \                                            ")
    escreval("      '''             \                                           ")
    escreval("      '''              \                                          ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
    escreval("     '''''                                                        ")
    escreval("  '''''''''''                                                     ")
    escreval("   '''''''''                                                      ")
@@ -214,13 +189,9 @@ inicio
    escreval("      '''         / | \                                           ")
    escreval("      '''        /  |  \                                          ")
    escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
    escreval("      '''          / \                                            ")
    escreval("      '''         /   \                                           ")
    escreval("      '''        /     \                                          ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
    escreval("      '''                                                         ")
    escreval("     '''''                                                        ")
    escreval("  '''''''''''                                                     ")
@@ -298,7 +269,6 @@ inicio
    palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
    escreval()
-   escreval("A palavra possui", tamanhoPalavra, " letras")
    indice <- 1
 
    // tranformando caractere em string
@@ -313,8 +283,12 @@ inicio
    enquanto chances > 0 faca
       limpatela
       imprimePersonagem(chances)
+      escreval()
+      se (chances > 0) e (ganhou=falso) entao
+         escreval("numero de chances restantes: ", chances)
+      fimse
+      
       indice <- 1
-
       enquanto indice <= tamanhoPalavra faca
          escreva(palavraAtual[indice])
          indice <- indice+1
@@ -364,10 +338,7 @@ inicio
 
          escreval()
          escreval()
-         // Imprimindo o personagem
 
-
-         
          se (chances > 0) e (ganhou=falso) entao
             escreval("numero de chances restantes: ", chances)
          fimse
