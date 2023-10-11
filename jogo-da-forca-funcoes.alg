@@ -1,4 +1,4 @@
-algoritmo "TesteArquivo"
+algoritmo "JogoDaForca"
 
 procedimento start()
 
@@ -228,6 +228,33 @@ inicio
 
 fimprocedimento
 
+procedimento imprimePersonagem(tentativas: inteiro)
+   var
+   inicio
+   escolha tentativas
+      caso 6
+         limpatela
+         start()
+      caso 5
+         limpatela
+         cabeca()
+      caso 4
+         limpatela
+         corpo()
+      caso 3
+         limpatela
+         bracoDireito()
+      caso 2
+         limpatela
+         bracoEsquerdo()
+      caso 1
+         limpatela
+         pernaDireita()
+
+   fimescolha
+
+fimprocedimento
+
 
 var
 // maior palavra tem 46 letras
@@ -262,16 +289,15 @@ funcao LerPalavra(palavraUsuario: caractere): caractere
 fimfuncao
 
 inicio
-   ganhou     <- falso
-   numAcertos <- 0
-   numErros   <- 0
+   ganhou         <- falso
+   numAcertos     <- 0
+   numErros       <- 0
    tamanhoPalavra <- 0
-
+   chances        <- 6
 
    palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
-   limpatela
-   start()
+   escreval()
    escreval("A palavra possui", tamanhoPalavra, " letras")
    indice <- 1
 
@@ -280,14 +306,21 @@ inicio
       letraPalavra <- copia(palavraMisteriosa, indice, 1)
       string[indice] <- letraPalavra
       palavraAtual[indice] <- " _ "
-      escreva(palavraAtual[indice])
       indice <- indice+1
    fimenquanto
 
-   chances <- 6
+
    enquanto chances > 0 faca
+      limpatela
+      imprimePersonagem(chances)
       indice <- 1
 
+      enquanto indice <= tamanhoPalavra faca
+         escreva(palavraAtual[indice])
+         indice <- indice+1
+      fimenquanto
+      
+      indice <- 1
       enquanto (indice <= tamanhoPalavra) faca
          // verifica se a letra da palavra atual corresponde
          //com a letra da palavra misteriosa
@@ -299,6 +332,7 @@ inicio
             fimse
          senao
             indice <- 1
+            escreval()
             escreval()
             escreva("Digite uma letra.........: ")
             leia(tentativaLetra)
@@ -324,29 +358,15 @@ inicio
                chances <- chances - 1
             fimse
          fimse
+         
+
       fimenquanto
 
          escreval()
          escreval()
          // Imprimindo o personagem
-         escolha chances
-            caso 5
-               limpatela
-               cabeca()
-            caso 4
-               limpatela
-               corpo()
-            caso 3
-               limpatela
-               bracoDireito()
-            caso 2
-               limpatela
-               bracoEsquerdo()
-            caso 1
-               limpatela
-               pernaDireita()
-            
-         fimescolha
+
+
          
          se (chances > 0) e (ganhou=falso) entao
             escreval("numero de chances restantes: ", chances)
