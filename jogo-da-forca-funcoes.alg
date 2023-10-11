@@ -241,12 +241,18 @@ var
  tentativaLetra: caractere
  letraEncontrada, ganhou: logico
 
-funcao LerPalavra(palavra: caractere): caractere
+funcao LerPalavra(palavraUsuario: caractere): caractere
+   arquivo "C:\Users\marina\Documents\fatec\algoritmos\joguinho\palavras.txt"
    var
+      listaPalavras: vetor[0..2] de caracter
+      i: inteiro
    inicio
-      escreva("digite uma palavra: ")
-      leia(palavra)
-      retorne palavra
+   i <- 0
+      enquanto i <= 2 faca
+         leia(palavraUsuario)
+         listaPalavras[i] <- palavraUsuario
+         i <- i + 1
+      fimenquanto
 
 fimfuncao
 
@@ -255,6 +261,7 @@ inicio
    numAcertos <- 0
    numErros   <- 0
    tamanhoPalavra <- 0
+
    palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
    tamanhoPalavra <- compr(palavraMisteriosa)
    escreval("A palavra possui", tamanhoPalavra, " letras")
@@ -268,7 +275,7 @@ inicio
       escreva(palavraAtual[indice])
       indice <- indice+1
    fimenquanto
-   
+
    chances <- 6
    enquanto chances > 0 faca
       indice <- 1
