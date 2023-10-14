@@ -226,9 +226,8 @@ procedimento imprimePersonagem(tentativas: inteiro)
 
 fimprocedimento
 
-
+// inicio do jogo
 var
-// maior palavra tem 46 letras
 
  palavraMisteriosa, letraPalavra: caractere
  string, palavraAtual: vetor[1..5] de caractere
@@ -240,6 +239,7 @@ var
  letraEncontrada, ganhou: logico
 
 funcao LerPalavra(palavraUsuario: caractere): caractere
+   // alterar o texto em vermelho para o caminho do arquivo: palavras.txt
    arquivo "C:\Users\marina\Documents\fatec\algoritmos\joguinho\palavras.txt"
    var
       listaPalavras: vetor[0..2] de caracter
@@ -280,6 +280,7 @@ inicio
       indice <- indice+1
    fimenquanto
    
+   // imprime * para cada letra digitada errada, 6 chances
    para posLista de 0 ate 5 faca
       listaErros[posLista] <- " * "
    fimpara
@@ -312,7 +313,7 @@ inicio
          se (palavraAtual[indice] = string[indice]) entao
             indice <- indice+1
             se  indice = tamanhoPalavra entao
-               chances <- -1
+               chances <- -1                 // para sair do loop chances > 0 e nao cair na condicao perdeu
                ganhou <- verdadeiro
             fimse
          senao
@@ -344,12 +345,10 @@ inicio
             fimse
          fimse
          
-
       fimenquanto
 
          escreval()
          escreval()
-
          se (chances > 0) e (ganhou=falso) entao
             escreval("numero de chances restantes: ", chances)
          fimse
