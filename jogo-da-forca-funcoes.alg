@@ -277,7 +277,8 @@ funcao LerPalavra(palavraUsuario: caractere): caractere
    inicio
    i <- 0
       enquanto i <= 2 faca
-         escreva("Escreva uma palavra de até 5 letras para ser adivinhada.....:")
+         escreval("Escreva 3 palavras de até 5 letras para ser adivinhada.....:")
+         escreva(i+1, "° palavra: ")
          leia(palavraUsuario)
          limpatela
          listaPalavras[i] <- palavraUsuario
