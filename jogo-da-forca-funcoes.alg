@@ -199,6 +199,36 @@ inicio
 
 fimprocedimento
 
+procedimento livre()
+
+var
+
+inicio
+
+   escreval("")
+   escreval( )
+   escreval( )
+   escreval("                                                  ")
+   escreval("---------------------- E S T O U    L I V R E --------------------")
+   escreval("                                                                  ")
+   escreval("                                                                  ")
+   escreval("                               * * *                              ")
+   escreval("                              *     *                             ")
+   escreval("                             \ * * * /                            ")
+   escreval("                              \  |  /                             ")
+   escreval("                               \ | /                              ")
+   escreval("                                 |                                ")
+   escreval("                                 |                                ")
+   escreval("                                / \                               ")
+   escreval("                               /   \                              ")
+   escreval("                              /     \                             ")
+   escreval("                                                                  ")
+   escreval("                                                                  ")
+   escreval("                                                                  ")
+   escreval("                                                                  ")
+
+fimprocedimento
+
 procedimento imprimePersonagem(tentativas: inteiro)
    var
    inicio
@@ -240,13 +270,14 @@ var
 
 funcao LerPalavra(palavraUsuario: caractere): caractere
    // alterar o texto em vermelho para o caminho do arquivo: palavras.txt
-   arquivo "C:\Users\marina\Documents\fatec\algoritmos\joguinho\palavras.txt"
+   //arquivo "F:\algoritmos\arquivo-jogoDaForca\palavras.txt"
    var
       listaPalavras: vetor[0..2] de caracter
       i: inteiro
    inicio
    i <- 0
       enquanto i <= 2 faca
+         escreva("Escreva uma palavra de até 5 letras para ser adivinhada.....:")
          leia(palavraUsuario)
          limpatela
          listaPalavras[i] <- palavraUsuario
@@ -359,6 +390,7 @@ inicio
          fimse
          se ganhou=verdadeiro entao
             limpatela
+            livre()
             escreval("Voce acertou a palavra misteriosa: ", palavraMisteriosa)
          fimse
       fimenquanto
