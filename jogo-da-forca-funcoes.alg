@@ -1,265 +1,9 @@
 algoritmo "JogoDaForca"
 
-procedimento start()
-
 var
-
-inicio
-
-   escreval("====================Bem vindo ao jogo da forca====================")
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-   
-fimprocedimento
-
-
-procedimento cabeca()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou 1 letra")
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-
-procedimento corpo()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou outra letra")
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-
-procedimento bracoDireito()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou outra letra")
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''           |\                                            ")
-   escreval("      '''           | \                                           ")
-   escreval("      '''           |  \                                          ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-
-procedimento bracoEsquerdo()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou outra letra")
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''          /|\                                            ")
-   escreval("      '''         / | \                                           ")
-   escreval("      '''        /  |  \                                          ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''           |                                             ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-
-procedimento pernaDireita()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou outra letra")
-   escreval( )
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''          /|\                                            ")
-   escreval("      '''         / | \                                           ")
-   escreval("      '''        /  |  \                                          ")
-   escreval("      '''           |                                             ")
-   escreval("      '''            \                                            ")
-   escreval("      '''             \                                           ")
-   escreval("      '''              \                                          ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-procedimento pernaEsquerda()
-
-var
-
-inicio
-
-   escreval("Que pena, você errou outra letra")
-   escreval( )
-   escreval( )
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      ''''''''''''''''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''          '''                                            ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''        *     *                                          ")
-   escreval("      '''         * * *                                           ")
-   escreval("      '''          /|\                                            ")
-   escreval("      '''         / | \                                           ")
-   escreval("      '''        /  |  \                                          ")
-   escreval("      '''           |                                             ")
-   escreval("      '''          / \                                            ")
-   escreval("      '''         /   \                                           ")
-   escreval("      '''        /     \                                          ")
-   escreval("      '''                                                         ")
-   escreval("     '''''                                                        ")
-   escreval("  '''''''''''                                                     ")
-   escreval("   '''''''''                                                      ")
-
-fimprocedimento
-
-procedimento livre()
-
-var
-
-inicio
-
-   escreval("")
-   escreval( )
-   escreval( )
-   escreval("                                                  ")
-   escreval("---------------------- E S T O U    L I V R E --------------------")
-   escreval("                                                                  ")
-   escreval("                                                                  ")
-   escreval("                               * * *                              ")
-   escreval("                              *     *                             ")
-   escreval("                             \ * * * /                            ")
-   escreval("                              \  |  /                             ")
-   escreval("                               \ | /                              ")
-   escreval("                                 |                                ")
-   escreval("                                 |                                ")
-   escreval("                                / \                               ")
-   escreval("                               /   \                              ")
-   escreval("                              /     \                             ")
-   escreval("                                                                  ")
-   escreval("                                                                  ")
-   escreval("                                                                  ")
-   escreval("                                                                  ")
-
-fimprocedimento
-
-procedimento imprimePersonagem(tentativas: inteiro)
-   var
-   inicio
-   escolha tentativas
-      caso 6
-         limpatela
-         start()
-      caso 5
-         limpatela
-         cabeca()
-      caso 4
-         limpatela
-         corpo()
-      caso 3
-         limpatela
-         bracoDireito()
-      caso 2
-         limpatela
-         bracoEsquerdo()
-      caso 1
-         limpatela
-         pernaDireita()
-
-   fimescolha
-
-fimprocedimento
-
-// inicio do jogo
-var
-
- palavraMisteriosa, letraPalavra: caractere
+ listaPalavras: vetor[0..4] de caracter
+ i: inteiro
+ palavraUsuario, palavraMisteriosa, letraPalavra: caractere
  string, palavraAtual: vetor[1..5] de caractere
  listaAcertos, listaErros: vetor[0..5] de caractere
  numAcertos, numErros, posLista: inteiro
@@ -268,29 +12,6 @@ var
  tentativaLetra: caractere
  letraEncontrada, ganhou: logico
 
-funcao LerPalavra(palavraUsuario: caractere): caractere
-   // alterar o texto em vermelho para o caminho do arquivo: palavras.txt
-   //arquivo "F:\algoritmos\arquivo-jogoDaForca\palavras.txt"
-   var
-      listaPalavras: vetor[0..2] de caracter
-      i: inteiro
-   inicio
-   i <- 0
-      enquanto i <= 2 faca
-         escreval("Escreva 3 palavras de até 5 letras para ser adivinhada.....:")
-         escreva(i+1, "° palavra: ")
-         leia(palavraUsuario)
-         limpatela
-         listaPalavras[i] <- palavraUsuario
-         i <- i + 1
-      fimenquanto
-      aleatorio 0, 2
-         leia(i)
-      aleatorio off
-      
-      retorne listaPalavras[i]
-fimfuncao
-
 inicio
    ganhou         <- falso
    numAcertos     <- 0
@@ -298,8 +19,22 @@ inicio
    tamanhoPalavra <- 0
    chances        <- 6
    posLista       <- 0
+   // usuario insere as palavras para ser sorteada uma palavra misteriosa no final
+      i <- 0
+      enquanto i <= 4 faca
+         escreval("Escreva 5 palavras de até 5 letras para ser adivinhada.....:")
+         escreva(i+1, "° palavra: ")
+         leia(palavraUsuario)
+         limpatela
+         listaPalavras[i] <- palavraUsuario
+         i <- i + 1
+      fimenquanto
+      aleatorio 0, 4
+         leia(i)
+      aleatorio off
+   
 
-   palavraMisteriosa <- Lerpalavra(palavraMisteriosa)
+   palavraMisteriosa <- listaPalavras[i]
    tamanhoPalavra <- compr(palavraMisteriosa)
    escreval()
    indice <- 1
@@ -320,7 +55,168 @@ inicio
 
    enquanto chances > 0 faca
       limpatela
-      imprimePersonagem(chances)
+      se (chances = 6) entao
+         escreval("====================Bem vindo ao jogo da forca====================")
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      fimse
+      
+      se (chances = 5) entao
+         escreval("Que pena, você errou 1 letra")
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      fimse
+      
+      se (chances = 4) entao
+         escreval("Que pena, você errou outra letra")
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      fimse
+      
+      se (chances = 3) entao
+         escreval("Que pena, você errou outra letra")
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''           |\                                            ")
+         escreval("      '''           | \                                           ")
+         escreval("      '''           |  \                                          ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      
+      fimse
+      
+      se (chances = 2) entao
+         escreval("Que pena, você errou outra letra")
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''          /|\                                            ")
+         escreval("      '''         / | \                                           ")
+         escreval("      '''        /  |  \                                          ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''           |                                             ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      fimse
+      
+      se (chances = 1) entao
+         escreval("Que pena, você errou outra letra")
+         escreval( )
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''          /|\                                            ")
+         escreval("      '''         / | \                                           ")
+         escreval("      '''        /  |  \                                          ")
+         escreval("      '''           |                                             ")
+         escreval("      '''            \                                            ")
+         escreval("      '''             \                                           ")
+         escreval("      '''              \                                          ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+
+      fimse
+
+      se (chances = 0) entao
+         escreval("Que pena, você errou outra letra")
+         escreval( )
+         escreval( )
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      ''''''''''''''''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''          '''                                            ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''        *     *                                          ")
+         escreval("      '''         * * *                                           ")
+         escreval("      '''          /|\                                            ")
+         escreval("      '''         / | \                                           ")
+         escreval("      '''        /  |  \                                          ")
+         escreval("      '''           |                                             ")
+         escreval("      '''          / \                                            ")
+         escreval("      '''         /   \                                           ")
+         escreval("      '''        /     \                                          ")
+         escreval("      '''                                                         ")
+         escreval("     '''''                                                        ")
+         escreval("  '''''''''''                                                     ")
+         escreval("   '''''''''                                                      ")
+      fimse
+      
+      
+      
+      
       escreva("Letras erradas: ")
       
       para posLista de 0 ate 5 faca
@@ -386,12 +282,51 @@ inicio
          fimse
          se (chances = 0) e (ganhou=falso) entao
             limpatela
-            pernaEsquerda()
+            escreval( )
+            escreval("----------------------- E N F O R C A D O ------------------------")
+            escreval("      ''''''''''''''''                                            ")
+            escreval("      ''''''''''''''''                                            ")
+            escreval("      '''          '''                                            ")
+            escreval("      '''          '''                                            ")
+            escreval("      '''         * * *                                           ")
+            escreval("      '''        *     *                                          ")
+            escreval("      '''         * * *                                           ")
+            escreval("      '''          /|\                                            ")
+            escreval("      '''         / | \                                           ")
+            escreval("      '''        /  |  \                                          ")
+            escreval("      '''           |                                             ")
+            escreval("      '''          / \                                            ")
+            escreval("      '''         /   \                                           ")
+            escreval("      '''        /     \                                          ")
+            escreval("      '''                                                         ")
+            escreval("     '''''                                                        ")
+            escreval("  '''''''''''                                                     ")
+            escreval("   '''''''''                                                      ")
+            
             escreval("Você perdeu, a palavra misteriosa era: ", palavraMisteriosa)
          fimse
          se ganhou=verdadeiro entao
             limpatela
-            livre()
+            escreval( )
+            escreval( )
+            escreval("                                                                  ")
+            escreval("---------------------- E S T O U    L I V R E --------------------")
+            escreval("                                                                  ")
+            escreval("                                                                  ")
+            escreval("                               * * *                              ")
+            escreval("                              *     *                             ")
+            escreval("                             \ * * * /                            ")
+            escreval("                              \  |  /                             ")
+            escreval("                               \ | /                              ")
+            escreval("                                 |                                ")
+            escreval("                                 |                                ")
+            escreval("                                / \                               ")
+            escreval("                               /   \                              ")
+            escreval("                              /     \                             ")
+            escreval("                                                                  ")
+            escreval("                                                                  ")
+            escreval("                                                                  ")
+            escreval("                                                                  ")
             escreval("Voce acertou a palavra misteriosa: ", palavraMisteriosa)
          fimse
       fimenquanto
