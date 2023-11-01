@@ -1,4 +1,4 @@
-algoritmo "JogoDaForca"
+algoritmo "Jogo"
 
 var
  listaPalavras: vetor[0..4] de caracter
